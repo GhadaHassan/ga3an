@@ -16,6 +16,7 @@ class Categories extends Resource
     {
         return [
             'name' => $this->name,
+            'img' => $this->img
         ];
     }
 }

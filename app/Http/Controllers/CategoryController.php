@@ -8,6 +8,8 @@ use App\Category;
 class CategoryController extends Controller
 {
     public function index() {
-        return Categories::collection(Category::all());
+        return Categories::collection(Category::all())
+        ->additional(['status' => 'success'
+        ]);
     }
 }
