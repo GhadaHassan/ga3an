@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    protected $fillable = [
+        'name', 'img',
+    ];
     public function plates()
     {
         return $this->hasMany('App\Plate');
