@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\Resource;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class Categories extends Resource
+class Categories extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -14,9 +14,6 @@ class Categories extends Resource
      */
     public function toArray($request)
     {
-        return [
-            'name' => $request->name,
-            'img' => $request->img,
-        ];
+        return parent::toArray($request);
     }
 }
