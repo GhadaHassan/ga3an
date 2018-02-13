@@ -23,6 +23,6 @@ $api->version('v1', function ($api) {
     $api->post('refresh', 'App\Http\Controllers\Auth\LoginController@refresh');
     $api->post('me', 'App\Http\Controllers\Auth\LoginController@me');
     $api->post('register', 'App\Http\Controllers\Auth\RegisterController@register');
-    $api->post('category', 'App\Http\Controllers\Auth\CategoryController@index');
+    $api->post('category', 'App\Http\Controllers\CategoryController@index');
     
 });
