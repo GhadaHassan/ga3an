@@ -85,6 +85,6 @@ class RegisterController extends Controller
             'password' => bcrypt($request->password)
         ]);
         //return redirect('api/login')->withInput();
-        return app('App\Http\Controllers\Auth\LoginController')->login($user);
+        return app('App\Http\Controllers\Auth\LoginController')->login($request);
     }
 }
