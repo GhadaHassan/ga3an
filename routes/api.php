@@ -24,5 +24,6 @@ $api->version('v1', function ($api) {
     $api->post('me', 'App\Http\Controllers\Auth\LoginController@me');
     $api->post('register', 'App\Http\Controllers\Auth\RegisterController@register');
     $api->post('category', 'App\Http\Controllers\CategoryController@index');
+    $api->post('testCat', 'App\Http\Controllers\CategoryController@testCat');
     
 });

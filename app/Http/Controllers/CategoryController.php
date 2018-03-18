@@ -12,4 +12,11 @@ class CategoryController extends Controller
         ->additional(['status' => 'success'
         ]);
     }
+    public function testCat()
+    {
+        # code...
+        return [
+            'test' => 'success test'
+        ];
+    }
 }
