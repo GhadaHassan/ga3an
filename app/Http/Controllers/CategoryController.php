@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Resources\Categories;
+use App\Http\Resources\Plates;
 use App\Category;
+use App\Plate;
 class CategoryController extends Controller
 {
     public function index() {
@@ -12,11 +14,10 @@ class CategoryController extends Controller
         ->additional(['status' => 'success'
         ]);
     }
-    public function testCat()
+    public function show($id)
     {
-        # code...
-        return [
-            'test' => 'success test'
-        ];
+        return Plates::collection(Plate::findOrFail($id))
+        ->additional(['status' => 'success'
+        ]);
     }
 }
