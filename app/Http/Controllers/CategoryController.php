@@ -16,7 +16,7 @@ class CategoryController extends Controller
     }
     public function show($id)
     {
-        return Plates::collection(Plate::findOrFail($id))
+        return Plates::collection(Plate::all($id))->plates()
         ->additional(['status' => 'success'
         ]);
     }
