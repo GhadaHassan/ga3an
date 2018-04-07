@@ -17,8 +17,6 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::find($id);
-        return Plates::collection(Plate::$category->plate)
-        ->additional(['status' => 'success'
-        ]);
+        return new Plates($category);
     }
 }
