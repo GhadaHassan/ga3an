@@ -17,6 +17,8 @@ class PlateSizes extends Resource
         return [
             'plate_id' => $this->plate_id,
             'size_id' => $this->size_id,
+            'name' => $this->name,
+            'size' => $this->size,
             'price' => $this->price
         ];
     }

@@ -15,9 +15,11 @@ class PlateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($plate_id,$size_id)
     {
-        //
+        $plate = Plate::find($plate_id);
+        $size = Size::find($size_id);
+        return new PLateSizes($plate,$size);
     } 
     public function store(Request $request)
     {
