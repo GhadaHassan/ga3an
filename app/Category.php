@@ -9,7 +9,7 @@ class Category extends Model
     protected $fillable = [
         'name', 'img',
     ];
-    public function plates()
+    public function plate()
     {
         return $this->hasMany('App\Plate');
     }
