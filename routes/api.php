@@ -24,6 +24,6 @@ $api->version('v1', function ($api) {
     $api->post('me', 'App\Http\Controllers\Auth\LoginController@me');
     $api->post('register', 'App\Http\Controllers\Auth\RegisterController@register');
     $api->get('category', 'App\Http\Controllers\CategoryController@index');
-    $api->get('category/{id}', 'App\Http\Controllers\CategoryControlle@show');   //request to show all plates in the category
+    $api->get('category/{id}', 'App\Http\Controllers\CategoryController@show');   //request to show all plates in the category
     $api->post('plate','App\Http\Controllers\PlateController@store');
 });
